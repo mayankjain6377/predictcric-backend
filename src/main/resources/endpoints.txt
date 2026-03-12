@@ -1,0 +1,24 @@
+APIs Built (Test in Postman)
+
+Player Module
+GET  /api/player/suggest-id?name=Chika  → suggests "CHIKA2047"
+POST /api/player/join                   → register permanently
+GET  /api/player/{playerId}             → returning player login
+
+
+Match Module
+GET  /api/matches/upcoming              → see all upcoming matches
+GET  /api/matches/{matchId}             → single match details
+GET  /api/matches/{matchId}/questions   → all 4 questions for a match
+
+
+Prediction Module
+POST /api/predictions/match/{matchId}              → submit an answer
+GET  /api/predictions/match/{matchId}/player/{id}  → see your answers
+
+
+Challenge Module
+POST /api/challenges                        → challenge a friend
+PUT  /api/challenges/{id}/accept            → friend accepts
+GET  /api/challenges/player/{playerId}      → see all your challenges
+GET  /api/challenges/{challengeId}          → single challenge details
